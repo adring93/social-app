@@ -2,8 +2,8 @@
 
 Option 2 for the CSS Frameworks Course Assignment (FED2-24).
 
-Built with **Tailwind CSS** via npm — no CDN.  
-Includes fully responsive pages:
+Built with **Tailwind CSS** installed through npm.  
+The project is fully responsive and includes three pages:
 
 - `/index.html` — authentication form with HTML validation (min 8 characters, redirects to /profile)  
 - `/feed/index.html` — feed with posts, thumbnails, search, sort, and new post form  
