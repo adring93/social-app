@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="no">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -7,82 +7,97 @@
     <link rel="stylesheet" href="/public/styles.css" />
   </head>
   <body class="min-h-screen bg-gray-50">
-  <header class="header-brand">
-  <div class="max-w-5xl mx-auto p-4 flex items-center justify-between">
-    <a href="/" class="font-bold">SocialApp</a>
-    <nav class="hidden sm:flex gap-3">
-      <a href="/feed/" class="btn-ghost nav-link-active">Feed</a>
-      <a href="/profile/" class="btn-ghost">Profil</a>
-    </nav>
-    <a href="/profile/" class="btn-outline bg-white/10 text-white hover:bg-white/20 rounded-lg px-3 py-1.5">Min profil</a>
-  </div>
-</header>
+    <header class="header-brand">
+      <div class="max-w-5xl mx-auto p-4 flex items-center justify-between">
+        <a href="/" class="font-bold">SocialApp</a>
+        <nav class="hidden sm:flex gap-3">
+          <a href="/feed/" class="btn-ghost nav-link-active">Feed</a>
+          <a href="/profile/" class="btn-ghost">Profile</a>
+        </nav>
+        <a
+          href="/profile/"
+          class="btn-outline bg-white/10 text-white hover:bg-white/20 rounded-lg px-3 py-1.5"
+        >
+          My profile
+        </a>
+      </div>
+    </header>
 
     <main class="max-w-5xl mx-auto p-4 space-y-6">
-      <section class="bg-white p-4 rounded-2xl shadow space-y-3">
+      <!-- Filters -->
+      <section class="card p-4 space-y-3">
         <form class="grid gap-3 sm:grid-cols-3">
           <input
             type="search"
-            placeholder="Søk i poster…"
-            class="rounded-lg border p-3"
+            placeholder="Search posts…"
+            class="input focus-ring"
           />
-          <select class="rounded-lg border p-3">
-            <option>Sorter: Nyest</option>
-            <option>Eldst</option>
-            <option>Mest likt</option>
+          <select class="select focus-ring">
+            <option>Sort: Newest</option>
+            <option>Oldest</option>
+            <option>Most liked</option>
           </select>
-          <a href="/profile/" class="rounded-lg border p-3 text-center">
-            Min profil
-          </a>
+          <a href="/profile/" class="btn-outline text-center">My profile</a>
         </form>
       </section>
 
-      <section class="bg-white p-4 rounded-2xl shadow">
-        <h2 class="font-semibold mb-3">Ny post</h2>
+      <!-- New post -->
+      <section class="card p-4">
+        <h2 class="font-semibold mb-3">New post</h2>
         <form class="grid gap-3 sm:grid-cols-2">
           <input
             required
-            placeholder="Tittel"
-            class="rounded-lg border p-3 sm:col-span-2"
+            placeholder="Title"
+            class="input focus-ring sm:col-span-2"
           />
           <input
             type="url"
-            placeholder="Bilde-URL (valgfritt)"
-            class="rounded-lg border p-3 sm:col-span-2"
+            placeholder="Image URL (optional)"
+            class="input focus-ring sm:col-span-2"
           />
           <textarea
             required
-            placeholder="Tekst"
-            class="rounded-lg border p-3 sm:col-span-2"
+            placeholder="Text"
+            class="textarea focus-ring sm:col-span-2"
           ></textarea>
-          <button
-            type="submit"
-            class="rounded-lg bg-blue-600 text-white p-3 sm:col-span-2"
-          >
-            Publiser
+          <button type="submit" class="btn-primary sm:col-span-2">
+            Publish
           </button>
         </form>
       </section>
 
+      <!-- Feed grid -->
       <section class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        <article class="bg-white rounded-2xl shadow overflow-hidden">
+        <article class="card overflow-hidden card-hover">
           <img
             src="https://picsum.photos/seed/1/600/400"
             alt=""
-            class="w-full h-40 object-cover"
+            class="card-media"
           />
-          <div class="p-4 space-y-2">
-            <h3 class="font-semibold">Fjelltur i helgen</h3>
+          <div class="card-body space-y-2">
+            <h3 class="font-semibold">Weekend hike</h3>
             <p class="text-sm text-gray-600 line-clamp-3">
-              Kort beskrivelse av posten…
+              Short description of the post…
             </p>
-            <div class="text-xs text-gray-500">Av @adrian • 2t</div>
+            <div class="text-xs text-gray-500">By @adrian • 2h</div>
           </div>
         </article>
 
-        <article class="bg-white rounded-2xl shadow overflow-hidden">
+        <article class="card overflow-hidden card-hover">
           <img
             src="https://picsum.photos/seed/2/600/400"
             alt=""
-            class="w-full h-40 ob
-
+            class="card-media"
+          />
+          <div class="card-body space-y-2">
+            <h3 class="font-semibold">Coding night</h3>
+            <p class="text-sm text-gray-600 line-clamp-3">
+              Tailwind makes UI fast.
+            </p>
+            <div class="text-xs text-gray-500">By @lillepus • 4h</div>
+          </div>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
