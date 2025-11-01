@@ -1,73 +1,75 @@
-
 <!doctype html>
-<html lang="no">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Social App | Profil</title>
+    <title>Social App | Profile</title>
     <link rel="stylesheet" href="/public/styles.css" />
   </head>
   <body class="min-h-screen bg-gray-50">
-    <header class="bg-white border-b">
+    <header class="header-brand">
       <div class="max-w-5xl mx-auto p-4 flex items-center justify-between">
         <a href="/" class="font-bold">SocialApp</a>
-        <nav class="hidden sm:flex gap-4">
-          <a href="/feed/" class="hover:underline">Feed</a>
-          <a href="/profile/" class="text-blue-600 font-medium">Profil</a>
+        <nav class="hidden sm:flex gap-3">
+          <a href="/feed/" class="btn-ghost">Feed</a>
+          <a href="/profile/" class="btn-ghost nav-link-active">Profile</a>
         </nav>
-        <button class="sm:hidden p-2 border rounded">Meny</button>
+        <a
+          href="/feed/"
+          class="btn-outline bg-white/10 text-white hover:bg-white/20 rounded-lg px-3 py-1.5"
+        >
+          Feed
+        </a>
       </div>
     </header>
 
     <main class="max-w-5xl mx-auto p-4 space-y-6">
+      <!-- Profile header -->
       <section
-        class="bg-white p-4 rounded-2xl shadow flex flex-col sm:flex-row items-center gap-4"
+        class="card p-4 flex flex-col sm:flex-row items-center gap-4"
       >
         <img
           src="https://i.pravatar.cc/160"
-          alt="Profilbilde"
+          alt="Profile picture"
           class="w-24 h-24 rounded-full object-cover"
         />
         <div class="flex-1 text-center sm:text-left">
           <h1 class="text-2xl font-bold">@adrian</h1>
-          <p class="text-gray-600">Frontend-student. Kaffe. Kode. Fjell.</p>
+          <p class="text-gray-600">Frontend student. Coffee. Code. Mountains.</p>
           <div
             class="flex gap-6 justify-center sm:justify-start mt-2 text-sm"
           >
-            <div><span class="font-semibold">128</span> følgere</div>
-            <div><span class="font-semibold">201</span> følger</div>
-            <div><span class="font-semibold">34</span> poster</div>
+            <div><span class="font-semibold">128</span> followers</div>
+            <div><span class="font-semibold">201</span> following</div>
+            <div><span class="font-semibold">34</span> posts</div>
           </div>
         </div>
-        <button
-          class="w-full sm:w-auto rounded-lg bg-blue-600 text-white px-4 py-2"
-        >
-          Følg
-        </button>
+        <button class="btn-primary w-full sm:w-auto">Follow</button>
       </section>
 
+      <!-- Posts grid -->
       <section class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        <article class="bg-white rounded-2xl shadow overflow-hidden">
+        <article class="card overflow-hidden card-hover">
           <img
             src="https://picsum.photos/seed/11/600/400"
-            class="w-full h-40 object-cover"
+            class="card-media"
             alt=""
           />
-          <div class="p-4">
-            <h3 class="font-semibold">Ukeprosjekt ✅</h3>
-            <p class="text-sm text-gray-600">CSS frameworks CA.</p>
+          <div class="card-body">
+            <h3 class="font-semibold">Weekly project ✅</h3>
+            <p class="text-sm text-gray-600">CSS Frameworks CA.</p>
           </div>
         </article>
 
-        <article class="bg-white rounded-2xl shadow overflow-hidden">
+        <article class="card overflow-hidden card-hover">
           <img
             src="https://picsum.photos/seed/12/600/400"
-            class="w-full h-40 object-cover"
+            class="card-media"
             alt=""
           />
-          <div class="p-4">
+          <div class="card-body">
             <h3 class="font-semibold">Americano ☕</h3>
-            <p class="text-sm text-gray-600">Sage + bønner = lykke.</p>
+            <p class="text-sm text-gray-600">Sage beans = happiness.</p>
           </div>
         </article>
       </section>
