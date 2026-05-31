@@ -1,63 +1,118 @@
 # Social App
 
-This is a responsive front-end social media interface built as coursework for the CSS Frameworks (FED2-24) module.  
-It demonstrates usage of [Tailwind CSS](https://tailwindcss.com/) with [Vite](https://vitejs.dev/) and [PostCSS](https://postcss.dev/) in a local development setup (no CDN).
+A responsive front-end social media interface built for the CSS Frameworks course assignment at Noroff.
 
----
+This project was originally created to practise Tailwind CSS, responsive layout, reusable styling and basic multi-page structure. For Portfolio 2, the project has been reviewed, improved and prepared for professional presentation.
+
+## Live Site
+
+https://social-app-cssframework.netlify.app/
+
+## Repository
+
+https://github.com/adring93/social-app
 
 ## Project Overview
 
 The project includes three pages:
 
-- **`index.html`**: Login/registration form with HTML validation (email and minimum 8 characters for passwords).
-- **`feed/index.html`**: Feed displaying a list of posts, search bar, sorting options, and a form for new posts.
-- **`profile/index.html`**: Profile page with user image, follow button, and user's posts.
+* `index.html`: Landing page with login and register form
+* `feed/index.html`: Feed page with post cards, search, sorting and a new post form
+* `profile/index.html`: Profile page with user information, statistics and post cards
 
-All pages are responsive and built with a consistent, component-based style.
+The site is built as a static front-end prototype. The login form is used to demonstrate navigation and user flow.
 
----
+## Portfolio 2 Improvements
+
+For Portfolio 2, I improved the project to make it more professional and portfolio ready.
+
+The main improvements were:
+
+* Updated the visual design with a cleaner and more modern color palette
+* Improved the first impression by changing the plain login page into a more complete landing and login page
+* Improved the feed page with better spacing, clearer hierarchy and more polished cards
+* Improved the profile page with a cleaner layout and better content structure
+* Improved contrast and readability
+* Updated image alt text for better accessibility
+* Fixed the Netlify deployment setup
+* Added a Vite multipage build configuration so all pages work correctly after deployment
+
+## Built With
+
+* HTML
+* Tailwind CSS
+* Vite
+* PostCSS
+* JavaScript
 
 ## Setup
 
-**Install dependencies:**
+Install dependencies:
+
 ```bash
 npm install
 ```
 
-**Start local development:**
+Start local development:
+
 ```bash
 npm run dev
 ```
 
-**Build for production:**
+Build for production:
+
 ```bash
 npm run build
 ```
 
----
+Preview production build:
 
-## Technical Details
+```bash
+npm run preview
+```
 
-- Tailwind CSS (npm install)
-- PostCSS (configured with `postcss.config.js` and `tailwind.config.js`)
-- Vite for dev/build scripts
-- No CDN is used for any CSS or JS
+## Technical Notes
 
----
+This project uses Tailwind through npm instead of a CDN. The Tailwind CLI builds the CSS from:
 
-## Testing & Validation
+```bash
+src/styles/app.css
+```
 
-- All layouts were manually checked from 320px wide to desktop screen widths.
-- Form fields enforce required email and password length via HTML validation.
-- Navigation between pages works through form actions.
-- Tailwind CLI was confirmed to output `public/styles.css` on changes.
-- The Vite server was verified at `http://localhost:5173/`.
+and outputs the final stylesheet to:
 
-## Branch & Submission
+```bash
+public/styles.css
+```
 
-- Branch: `css-frameworks`
-- Submitted via open Pull Request into `main`
+The project also uses `vite.config.js` to make sure all three HTML pages are included in the production build.
 
----
+## Pages
 
-This project is for educational demonstration only.
+### Home and Login
+
+The home page introduces the project and includes a login/register form. It was redesigned for Portfolio 2 to create a stronger first impression.
+
+### Feed
+
+The feed page shows a simple social media layout with search, sorting, post creation and responsive post cards.
+
+### Profile
+
+The profile page shows a user profile, follower statistics and a small post grid.
+
+## Testing
+
+The project was manually tested by checking:
+
+* Home page loads correctly
+* Login form redirects to the feed page
+* Feed page loads correctly
+* Profile page loads correctly
+* Navigation between pages works
+* Layout works on smaller and larger screens
+* Netlify deployment works after production build
+
+## Status
+
+Completed and improved for Portfolio 2.
