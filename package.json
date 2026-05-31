@@ -7,7 +7,7 @@
     "dev": "vite",
     "dev:css": "tailwindcss -i ./src/styles/app.css -o ./public/styles.css --watch",
     "build:css": "tailwindcss -i ./src/styles/app.css -o ./public/styles.css --minify",
-    "build": "npm run build:css && vite build",
+    "build": "npm run build:css && node ./node_modules/vite/bin/vite.js build",
     "preview": "vite preview"
   },
   "keywords": [],
